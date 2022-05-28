@@ -67,7 +67,7 @@ const produtos = [
     {
         id: 6,
         nome: 'Ração Seca PremieR Golden Gatos Adultos',
-        img: 'img/caes-3.png',
+        img: 'img/gatos-3.png.',
         preco: 131.31
 
     },
