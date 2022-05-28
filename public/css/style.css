@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cor0: #D9CEF2;
+    --cor1:#B8A0D9;
+    --cor2: #533361;
+    --cor3: #6D7345;
+
+    --font: 'Montserrat', sans-serif;
+    --font-title: "Prata", serif;
+}
+
+body {
+    font-family: var(--font);
+
+}
+
+.menu,.header {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/***********HEADER**********/
+header {
+    background-image: linear-gradient(to right, #B8A0D9, #5c4168);
+    max-width: 100%;
+}
+
+.logo-img {
+    width: 150px;
+}
+header form {
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.158);
+    border-radius: 3px;
+    padding: 8px 20px;
+    min-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.search {
+    background-color: transparent;
+    border: none;
+    color: black;
+    outline: 0;
+    font-size: 1em;
+    color:white;
+    
+}
+
+.search::placeholder {
+    color: white;
+}
+
+header .bi {
+    color: white;
+    font-size: 1.3em;
+}
+
+.btn {
+    padding: 8px;
+    border-radius: 4px;
+    border-width: thin;
+    font-size: 0.9em;
+    background-color: var(--cor2);
+    color: white;
+
+}
+
+.btn:hover {
+    background-color: #3d2647;
+    color:white
+}
+
+/********LOGIN E CARRINHO*******/
+.login {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    color: white;
+    margin-right: 10px;
+}
+
+.login p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+}
+
+.login i {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+.bag-itens {
+    float:right;
+    padding: 5px;
+    background-color: rgb(252, 72, 72);
+    padding: 0px 10px;
+    border-radius:100%;
+    margin-right: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+    
+}
+
+
+.entrar {
+    font-size: 1.2em;
+    font-family: var(--font-title);
+}
+
+/*********************/
+
+/********MENU *************/
+nav {
+    background-color: var(--cor2);
+    text-align: left;
+}
+nav ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    background-color: var(--cor2);
+    margin-bottom: 0;
+}
+
+nav a {
+    font-family: var(--font-title);
+    font-size: 1.2em;
+    
+    text-decoration: none;
+    color:white;
+}
+
+nav a:hover, .login p:hover {
+    border-bottom: 1px solid var(--cor1);
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*********** MENU MOBILE ***********/
+.treeline-icon {
+    font-family: var(--font-title);
+    font-size: 2em;
+    color:white;
+
+    display: none;
+}
+
+
+#slider img {
+    width: 100%;
+}
+/*************** Sessão produtos *********************/
+
+.produtos {
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.produtos p {
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: 1.3em;
+    padding: 20px;
+    
+}
+
+.card-unico .btn {
+    font-size: 1.1em;
+}
+
+.card-unico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-unico-2 {
+    margiN: 100px;
+}
+
+.card-unico p {
+    max-width: 600px;
+}
+
+.card-unico h2 {
+    color:var(--cor3);
+}
+
+.card-unico img:hover {
+    transform: scale(0.9, 0.9);
+    transition: 0.3s;
+}
+
+.produtos h1 {
+    font-size: 3.5em;
+    text-align: center;
+    padding: 50px;
+    color:var(--cor3);
+}
+
+/******** cards*******/
+.grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: 'c-1 c-2 c-3 c-4';
+    gap:2vh;
+    margin-bottom: 15px;
+
+}
+
+.card-1 {
+    grid-area: c-1;
+}
+
+.card-2 {
+    grid-area: c-2;
+}
+
+.card-3 {
+    grid-area: c-3;
+}
+
+.card-4 {
+    grid-area: c-4;
+}
+
+.card  {
+    max-width: 300px;
+    padding: 20px 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    border: 1px solid var(--cor1);
+    transition: 0.5s;
+}
+
+.card img {
+    max-width: 150px;
+}
+
+.card h2 {
+    height: 100px;
+    font-size: 1.3em;
+    padding: 10px;
+    text-align: center;
+    color:var(--cor3);
+    display: flex;
+    align-items: center;
+    
+}
+
+.card p {
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-img {
+    text-align: center;
+}
+
+/************ FOOTER ***********/
+.redes-sociais {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+}
+
+.redes-sociais ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+.redes-sociais p {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.redes-sociais a {
+    color:var(--cor2);
+    font-size: 1.8em;
+    padding: 10px;
+    
+}
+
+.redes-sociais a:hover {
+    font-size: 1.9em;
+}
+
+.formas-pag {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.formas-pag p {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.formas-pag img{
+    max-width: 400px;
+}
+
+.footer-info {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+@media(max-width:900px) {
+
+    
+    nav ul li {
+        display: none;
+    }
+
+
+    .treeline-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /********* HEADER MOBILE******/
+   
+    .header {
+        display: block;
+        padding: 10px;
+    }
+    .login {
+        justify-content: end;
+        padding-top: 20px;
+    }
+
+    header form {
+        margin: 20px auto 0 auto;
+        min-width: 200px;
+    }
+
+    #logo {
+        text-align: center;
+        margin: auto;
+    }
+
+    .login p {
+        font-size: 1.1em;
+    }
+
+    .login i {
+        font-size: 1.7em;
+    }
+
+   
+
+    /******** Menu Mobile **********/
+    .menu-mobile {
+        display: block;
+
+        animation-name: menu-animation;
+        animation-duration: 1s;
+        
+    }
+    .menu-mobile ul {
+        display: inline-block;
+        
+    }
+
+    .menu-mobile ul li{
+        display: block;
+        text-align: left;
+    }
+
+    .menu-mobile a {
+        font-size: 1em;
+    }
+
+    /*Animação*/
+
+    @keyframes menu-animation {
+        0% {
+            /*condição ao 0% (quando abre a página)*/
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        100% {
+            /*condição aos 100% (quando a página carrega*/
+            opacity: 1;
+            transform: translate(0, 0px);
+        }
+    }
+
+    /********* SESSÃO PRODUTOS *********/
+
+    .container {
+        margin-bottom: 30px;
+    }
+
+    .card-unico img{
+        max-width: 250px;
+       
+    }
+
+    .card-unico-2 {
+        display: none;
+    }
+
+
+    .produtos p {
+        font-size: 1.2em;
+    }
+
+    .produtos .btn {
+        font-size: 1em;
+    }
+
+    .grid {
+        grid-template-areas: 'c-1 c-2' 'c-3 c-4';
+    }
+
+    .card-img {
+        max-width: 150px;
+        max-height: 250px;
+    }
+
+    .card h2 {
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+
+    .produtos p {
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    .produtos h1 {
+        font-size: 2.2em;
+    }
+
+    /********* Footer **********/
+
+    .redes-sociais a {
+        font-size: 1.5em;
+    }
+
+    .redes-sociais a:hover {
+        font-size: 1.5em;
+    }
+}
