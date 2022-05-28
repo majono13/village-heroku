@@ -432,8 +432,22 @@ nav a:hover, .login p:hover {
         margin-bottom: 30px;
     }
 
+    .info {
+        text-align: center;
+    }
+
+    .info .btn {
+       margin: auto;
+        width: 90%;
+    }
+    .card-unico h2 {
+        text-align: center;
+        display: block;
+    }
+
     .card-unico img{
         max-width: 250px;
+        height: 240px;
        
     }
 
