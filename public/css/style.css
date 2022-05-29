@@ -164,7 +164,13 @@ nav a:hover, .login p:hover {
     justify-content: space-between;
 }
 
-
+/***SLIDERS E BANNERS*********/
+.banners img {
+    width: 100%;
+}
+.banners div {
+    text-align: center;
+}
 
 /*********** MENU MOBILE ***********/
 .treeline-icon {

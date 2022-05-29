@@ -40,14 +40,14 @@
 
                 <h1>Mais Vendidos</h1>
                 <div class="mais-vendidos">
-                    
+            
                 </div>
 
                 <%- include('../index/card2')%>
 
                 <h1>Gatos Adoram</h1>
                 <div class="gatos-adoram">
-    
+                    
                 </div>
 
                 <h1>Cachorros Amam</h1>
@@ -61,6 +61,21 @@
            
             <%}%>
 
+            <% if(title == 'Brinquedos') { %>
+
+                <%- include('../brinquedos/index')%>
+        
+               
+                <%}%>
+
+                <% if(title == 'Alimentação') { %>
+
+                    <%- include('../alimentacao/index')%>
+            
+                   
+                    <%}%>
+    
+
             <%- include('../partials/footer') %>
         
         <!-- JavaScript Bundle with Popper -->
@@ -69,6 +84,7 @@
             crossorigin="anonymous"></script>
 
         <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
