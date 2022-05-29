@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-</head>
+    </head>
 
 <body>
 
     <!-- Header e nav -->
-    <header id="inicio">
+    <header>
         <%- include('../partials/header.ejs') %>
     </header>
 
@@ -33,7 +33,7 @@
     <% if(title=='Home' ) { %>
 
         <%- include('../index/slider')%>
-            <main>
+            <main id="inicio">
                 <div class="produtos">
 
                     <%- include('../index/card1')%>
