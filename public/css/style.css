@@ -427,6 +427,9 @@ main {
 }
 @media(max-width:900px) {
 
+    body {
+        overflow-x: hidden;
+    }
     
     nav ul li {
         display: none;
