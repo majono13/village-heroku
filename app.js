@@ -11,11 +11,15 @@ const app = express()
 const indexRouter = require('./routes/index')
 const toyRouter = require('./routes/brinquedos')
 const foodRouter = require('./routes/alimentacao')
+const diverseRouter = require('./routes/diversos')
+const contactRouter = require('./routes/contato')
 
 //HABILITANDO ROTAS
 app.use('/', indexRouter)
 app.use('/brinquedos', toyRouter)
 app.use('/alimentacao', foodRouter)
+app.use('/diversos', diverseRouter)
+app.use('/contato', contactRouter)
 
 //Arquivos estáticos
 app.use(express.static('public'))

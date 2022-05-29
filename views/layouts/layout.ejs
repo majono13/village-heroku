@@ -30,60 +30,80 @@
     </nav>
 
     <!-- INDEX-->
-        <% if(title == 'Home') { %>
+    <% if(title=='Home' ) { %>
 
-            <%- include('../index/slider')%>
-            <main>
+        <%- include('../index/slider')%>
+            <main id="main">
                 <div class="produtos">
 
                     <%- include('../index/card1')%>
 
-                <h1>Mais Vendidos</h1>
-                <div class="mais-vendidos">
-            
-                </div>
+                        <h1>Mais Vendidos</h1>
+                        <div class="mais-vendidos">
 
-                <%- include('../index/card2')%>
+                        </div>
 
-                <h1>Gatos Adoram</h1>
-                <div class="gatos-adoram">
-                    
-                </div>
+                        <%- include('../index/card2')%>
 
-                <h1>Cachorros Amam</h1>
-                <div class="cachorros-amam">
-    
-                </div>
+                            <h1>Gatos Adoram</h1>
+                            <div class="gatos-adoram">
 
-                <%- include('../index/card3')%>
+                            </div>
+
+                            <h1>Cachorros Amam</h1>
+                            <div class="cachorros-amam">
+
+                            </div>
+
+                            <%- include('../index/card3')%>
                 </div>
             </main>
-           
-            <%}%>
 
-            <% if(title == 'Brinquedos') { %>
+        <%}%>
+
+            <!--Sessão BRINQUEDOS -->
+            <% if(title=='Brinquedos' ) { %>
 
                 <%- include('../brinquedos/index')%>
-        
-               
-                <%}%>
 
-                <% if(title == 'Alimentação') { %>
 
-                    <%- include('../alimentacao/index')%>
-            
-                   
-                    <%}%>
-    
+            <%}%>
 
-            <%- include('../partials/footer') %>
-        
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous"></script>
+            <!--Sessão ALIMENTAÇÃO -->
+            <% if(title=='Alimentação' ) { %>
 
-        <script src="js/scripts.js"></script>
+                 <%- include('../alimentacao/index')%>
+
+            <%}%>
+
+             <!--Sessão DIVERSOS -->
+             <% if(title=='Diversos' ) { %>
+
+                <%- include('../diversos/index')%>
+
+           <%}%>
+
+           <!-- Sessão contato -->
+
+             <!--Sessão DIVERSOS -->
+             <% if(title=='Contato' ) { %>
+
+                <%- include('../contato/index')%>
+
+           <%}%>
+
+                <%- include('../partials/button-top') %>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+    <script src="js/scripts.js"></script>
 
 </body>
 
