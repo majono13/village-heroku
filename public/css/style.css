@@ -586,6 +586,14 @@ main {
         font-size: 1.5em;
     }
 
+    .formas-pag {
+        padding: 5px;
+    }
+
+    .formas-pag img {
+        max-width: 95%;
+    }
+
     /**** Contato *******/
 
     .contato {

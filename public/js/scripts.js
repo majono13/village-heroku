@@ -484,6 +484,8 @@ const produtos = [
 ]
 
 
+
+
 async function creatCard(container, j) {
     let i = 0
     let numCards = 1
@@ -507,7 +509,8 @@ async function creatCard(container, j) {
             grid.className = 'grid';
             card.className = 'card card-' + numCards;
             p.className = 'preco';
-            button.className = 'btn';
+            button.className = 'btn btn-comprar';
+            button.setAttribute('value', produtos[j][i].id)
             divImg.className = 'card-img';
             tagImg.className = 'logo-img';
 
@@ -543,3 +546,43 @@ creatCard(document.querySelector('.alim-caes'), 6)
 creatCard(document.querySelector('.diversos-gatos'), 7)
 creatCard(document.querySelector('.diversos-caes'), 8)
 creatCard(document.querySelector('.outono'), 9)
+
+
+/*** CARRINHO ***/
+const body = document.querySelector('.produtos')
+
+body.addEventListener('click', function (e) {
+    const el = e.target;
+    if (el.classList.contains('btn-comprar')) {
+        carrinho.addBag(el.value)
+    }
+});
+
+class Carrinho {
+    constructor() {
+        this.bag = []
+    }
+
+    addBag(id) {
+
+        for (let j = 0; j <= produtos[j].length; j++) {
+
+            for (let i in produtos[j]) {
+
+                if (produtos[j][i].id == id) {
+                    this.bag.push(produtos[j][i])
+                }
+            }
+        }
+
+        this.attItems()
+    }
+
+    attItems() {
+        const bagItens = document.querySelector('.bag-itens')
+
+        bagItens.innerText = this.bag.length
+    }
+}
+
+const carrinho = new Carrinho()
