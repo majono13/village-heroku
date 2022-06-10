@@ -425,6 +425,47 @@ main {
 .show-button {
     transition: 0.4s all;
 }
+
+/***** CARRINHO ******/
+.item {
+ display: flex;
+ align-items: center;
+ box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+ border-radius: 10px;
+ max-width: 95%;
+ padding: 20px;
+ margin-bottom: 30px;
+}
+
+.item div {
+    padding-right: 30px;
+}
+
+.item h2 {
+    margin-bottom: 50px;
+}
+
+.item img {
+    max-width: 200px;
+}
+
+.finalizar {
+    text-align: center;
+    margin: auto;
+}
+.finalizar p {
+    text-align: center;
+    font-size: 2.5em;
+  
+}
+
+.finalizar button {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    font-size: 1.3em;
+    padding: 5px;
+}
 @media(max-width:900px) {
 
     body {
@@ -605,4 +646,7 @@ main {
         
     }
     
+    .finalizar button {
+        width: 90%;
+    }
 }

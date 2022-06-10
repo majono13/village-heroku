@@ -29,9 +29,9 @@
         <%- include('../partials/menu.ejs')%>
     </nav>
 
-    <!-- INDEX-->
+   
     <% if(title=='Home' ) { %>
-
+         <!-- INDEX-->
         <%- include('../index/slider')%>
             <main id="main">
                 <div class="produtos">
@@ -40,7 +40,7 @@
 
                         <h1>Mais Vendidos</h1>
                         <div class="mais-vendidos">
-
+                            
                         </div>
 
                         <%- include('../index/card2')%>
@@ -61,34 +61,42 @@
 
         <%}%>
 
-            <!--Sessão BRINQUEDOS -->
+          
             <% if(title=='Brinquedos' ) { %>
-
+                <!--Sessão BRINQUEDOS -->
                 <%- include('../brinquedos/index')%>
-
-
             <%}%>
 
-            <!--Sessão ALIMENTAÇÃO -->
+            
             <% if(title=='Alimentação' ) { %>
-
+                    <!--Sessão ALIMENTAÇÃO -->
                  <%- include('../alimentacao/index')%>
 
             <%}%>
 
-             <!--Sessão DIVERSOS -->
+             
              <% if(title=='Diversos' ) { %>
-
+                <!--Sessão DIVERSOS -->
                 <%- include('../diversos/index')%>
 
            <%}%>
 
-           <!-- Sessão contato -->
+         
 
-             <!--Sessão DIVERSOS -->
+           
              <% if(title=='Contato' ) { %>
-
+                  <!-- Sessão contato -->
                 <%- include('../contato/index')%>
+
+           <%}%>
+
+                <%- include('../partials/button-top') %>
+
+            <!-- SESSÃO CARRINHO -->
+
+            <% if(title=='Carrinho' ) { %>
+
+                <%- include('../carrinho/index')%>
 
            <%}%>
 
@@ -104,6 +112,7 @@
     crossorigin="anonymous"></script>
 
     <script src="js/scripts.js"></script>
+   <script src="creatCard.js"></script>
 
 </body>
 
