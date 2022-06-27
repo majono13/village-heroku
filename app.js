@@ -18,10 +18,12 @@ app.use(express.json())
 
 /*Importando rotas*/
 const indexRouter = require('./routes/index')
+const bagRouter = require('./routes/carrinho')
 
 
 //HABILITANDO ROTAS
 app.use('/', indexRouter)
+app.use('/carrinho', bagRouter)
 
 //Arquivos estáticos public
 app.use(express.static('public'))
@@ -31,7 +33,7 @@ app.use('/js', express.static(__dirname + 'public/js'))
 
 //Arquivos estáticos src
 app.use(express.static('src'))
-app.use('/src', express.static(__dirname + 'src/'))
+app.use('/src', express.static(__dirname + 'src'))
 
 
 

@@ -11,6 +11,9 @@ const DB_PASS = encodeURIComponent(process.env.DB_PASS)
 const Produto = require('../model/Product')
 const Usuario = require('../model/User')
 const Pedido = require('../model/Order')
+/*const Produto2 = require('.../model/Product-2')
+const produtos = Produto2.find()*/
+
 
 mongoose
     .connect(`mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.ny1mj.mongodb.net/?retryWrites=true&w=majority`)
@@ -22,49 +25,12 @@ mongoose
 
 
 /***************** ROTAS ****************************/
-router.get('/carrinho', (req, res) => {
-    res.render('../views/layouts/layout', {
-        title: 'Carrinho',
-        section: 'Carrinho',
-    })
-})
-router.post('/carrinho', async (req, res) => {
-    const { img, nome, preco, qtd, estoque } = req.body
-
-    try {
-        const novoProduto = {
-            img: img,
-            nome: nome,
-            preco: preco,
-            qtd: qtd,
-            estoque: estoque
-        }
-
-        await Produto.creat(novoProduto)
-        res.status(201).json(novoProduto)
-    }
-    catch (err) {
-        res.status(500).json(`Falha na inclusão: ${err}`)
-        return
-    }
-})
-
-router.get('/listar', async (req, res) => {
-    let produtos = [];
-    produtos = await Produto.find();
-    res.json(produtos)
-    return
-})
-
-
 
 /*rota home*/
 router.get('/', (req, res) => {
     res.render('../views/layouts/layout', {
         title: 'Home',
         section: 'Home',
-        class: '.mais-vendidos',
-        indice: 0
     })
 })
 
@@ -100,5 +66,6 @@ router.get('/alimentacao', (req, res) => {
         section: 'Alimentação',
     })
 })
+
 
 module.exports = router
